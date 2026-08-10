@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katala Homes · Luxury Footwear</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        
+                        <span class="logo-text">Katala Homes</span>
+                    </a>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="admin/login.html" style="color: var(--gold-dark); font-weight: 600;"><i class="fas fa-lock"></i> Admin</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i> <span class="cart-count">0</span></a>
+                    <i class="fas fa-user" id="userIcon"></i>
+                    <i class="fas fa-bars" id="menuToggle"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-badge">✦ NEW COLLECTION 2026</span>
+                <h1>Step into <br />Italian luxury</h1>
+                <p>Handcrafted footwear with timeless elegance. Designed in Milan for the discerning modern explorer.</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary">Explore collection</a>
+                    <a href="about.html" class="btn btn-outline">Our story</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=400&fit=crop" alt="Katala Homes sneaker" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ALL PRODUCTS -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>✦ Our collection</h2>
+                <a href="products.html" class="view-all">View all <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="product-grid" id="featuredGrid"></div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>✦ Shop by category</h2>
+            </div>
+            <div class="category-grid">
+                <div class="category-card" style="background: #f5efe6;"><i class="fas fa-running"></i><h3>Runners</h3></div>
+                <div class="category-card" style="background: #f0f0ed;"><i class="fas fa-shoe-prints"></i><h3>Lo-tops</h3></div>
+                <div class="category-card" style="background: #f5efe6;"><i class="fas fa-bolt"></i><h3>Mid-tops</h3></div>
+                <div class="category-card" style="background: #f0f0ed;"><i class="fas fa-star"></i><h3>Classics</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 style="display:flex;align-items:center;gap:8px;">
+                        
+                        <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">Katala Homes</span>
+                    </h3>
+                    <p>Luxury footwear crafted in Italy.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col"><h4>Shop</h4><a href="products.html">All products</a><a href="#">New arrivals</a><a href="#">Sale</a></div>
+                <div class="footer-col"><h4>Support</h4><a href="contact.html">Contact</a><a href="#">Returns</a><a href="#">Size guide</a></div>
+                <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="#">Careers</a><a href="admin/login.html">Admin</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Katala Homes. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Katala Homes</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Katala Homes</a>
+      <ul class="nav-links">
+        <li><a href="index.html">View Storefront</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="admin-container">
+    <aside class="admin-sidebar">
+      <div class="admin-nav-item active" onclick="switchSection('products-sec', this)">Products</div>
+      <div class="admin-nav-item" onclick="switchSection('orders-sec', this)">Orders</div>
+    </aside>
+
+    <main class="admin-content">
+      
+      <!-- Products Admin Panel Section -->
+      <section id="products-sec" class="admin-section active">
+        <div class="admin-header-row">
+          <h2>Product Inventory</h2>
+          <button class="btn btn-primary" style="padding:0.6rem 1.5rem;" onclick="toggleModal('product-modal', true)">+ Add Footwear</button>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product Title</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="admin-product-rows">
+            <tr>
+              <td><img src="image_agent_tag_16567891273776312917" width="50" style="object-fit: cover; height: 50px;" alt=""></td>
+              <td>Aurelius Oxford Dress Shoe</td>
+              <td>Classic Collection</td>
+              <td>$280.00</td>
+              <td><a href="#" style="color:var(--accent);">Edit</a></td>
+            </tr>
+            <tr>
+              <td><img src="image_agent_tag_16567891273776315584" width="50" style="object-fit: cover; height: 50px;" alt=""></td>
+              <td>Specter Minimalist Sneaker</td>
+              <td>Modern Casual</td>
+              <td>$195.00</td>
+              <td><a href="#" style="color:var(--accent);">Edit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Orders Admin Panel Section -->
+      <section id="orders-sec" class="admin-section">
+        <div class="admin-header-row">
+          <h2>Client Orders</h2>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Client</th>
+              <th>Purchased</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#10023</td>
+              <td>Tariq Johnson</td>
+              <td>Classic Chelsea Boot (Size 43)</td>
+              <td>$340.00</td>
+              <td><span style="color:#2ecc71; font-weight:600;">Dispatched</span></td>
+            </tr>
+            <tr>
+              <td>#10022</td>
+              <td>Amara Okafor</td>
+              <td>Aurelius Oxford Dress Shoe (Size 41)</td>
+              <td>$280.00</td>
+              <td><span style="color:#f39c12; font-weight:600;">Pending</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Add Product Modal Layer -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-content">
+      <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">New Footwear Profile</h3>
+      <form id="new-product-form" onsubmit="handleNewProduct(event)">
+        <div class="form-group">
+          <label>Shoe Name</label>
+          <input type="text" id="p-name" class="form-control" required placeholder="e.g. Nero Italian Loafer">
+        </div>
+        <div class="form-group">
+          <label>Category</label>
+          <input type="text" id="p-cat" class="form-control" required placeholder="e.g. Handcrafted Casual">
+        </div>
+        <div class="form-group">
+          <label>Price ($)</label>
+          <input type="text" id="p-price" class="form-control" required placeholder="e.g. 290.00">
+        </div>
+        <div class="form-group">
+          <label>Image Reference</label>
+          <input type="text" id="p-img" class="form-control" placeholder="Direct URL or image tag placeholder">
+        </div>
+        
+        <div style="display:flex; gap:1rem; margin-top: 2rem;">
+          <button type="submit" class="btn btn-primary" style="flex:1;">Publish Product</button>
+          <button type="button" class="btn btn-outline" style="flex:1;" onclick="toggleModal('product-modal', false)">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Tab switching system
+    function switchSection(secId, navItem) {
+      document.querySelectorAll('.admin-section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.admin-nav-item').forEach(n => n.classList.remove('active'));
+      
+      document.getElementById(secId).classList.add('active');
+      navItem.classList.add('active');
+    }
+
+    // Modal view controller
+    function toggleModal(modalId, show) {
+      const modal = document.getElementById(modalId);
+      if (show) {
+        modal.classList.add('active');
+      } else {
+        modal.classList.remove('active');
+      }
+    }
+
+    // Handle publishing demo product entries
+    function handleNewProduct(e) {
+      e.preventDefault();
+      const name = document.getElementById('p-name').value;
+      const cat = document.getElementById('p-cat').value;
+      const price = document.getElementById('p-price').value;
+      let img = document.getElementById('p-img').value;
+
+      if (!img) {
+        // Fallback placeholder image tag if none provided
+        img = "image_agent_tag_16567891273776314155";
+      }
+
+      const tbody = document.getElementById('admin-product-rows');
+      const newRow = document.createElement('tr');
+      newRow.innerHTML = `
+        <td><img src="${img}" width="50" style="object-fit: cover; height: 50px;" alt=""></td>
+        <td>${name}</td>
+        <td>${cat}</td>
+        <td>$${price}</td>
+        <td><a href="#" style="color:var(--accent);">Edit</a></td>
+      `;
+      tbody.appendChild(newRow);
+
+      alert(`"${name}" was successfully registered to database index.`);
+      toggleModal('product-modal', false);
+      document.getElementById('new-product-form').reset();
+    }
+  </script>
+</body>
+</html>

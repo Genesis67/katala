@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Products · Katala Homes Admin</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="admin-brand" style="display:flex;align-items:center;gap:8px;">
+                
+                <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">Katala Homes</span>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+                <a href="products.html" class="active"><i class="fas fa-box"></i> Products</a>
+                <a href="orders.html"><i class="fas fa-truck"></i> Orders</a>
+                <a href="customers.html"><i class="fas fa-users"></i> Customers</a>
+                <a href="add-product.html"><i class="fas fa-plus-circle"></i> Add Product</a>
+                <a href="../index.html" style="margin-top:40px;border-top:1px solid #eee;padding-top:16px;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1><i class="fas fa-box" style="color: var(--gold);"></i> Manage Products</h1>
+                <a href="add-product.html" class="btn btn-primary"><i class="fas fa-plus"></i> Add new product</a>
+            </header>
+
+            <!-- Product Stats -->
+            <div class="admin-stats" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="stat-card" style="border-left: 4px solid var(--gold);">
+                    <h3>12</h3>
+                    <p>Total products</p>

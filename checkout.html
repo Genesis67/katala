@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout · Katala Homes</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        
+                        <span class="logo-text">Katala Homes</span>
+                    </a>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="admin/login.html" style="color: var(--gold-dark); font-weight: 600;"><i class="fas fa-lock"></i> Admin</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i> <span class="cart-count">0</span></a>
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-bars" id="menuToggle"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header" style="background: linear-gradient(135deg, #faf9f8 0%, #f5efe6 100%);">
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <a href="cart.html" style="color: #666; text-decoration: none;"><i class="fas fa-arrow-left"></i> Back to cart</a>
+                <span style="color: #ddd;">|</span>
+                <h1 style="font-size: 1.8rem; margin: 0;">Checkout</h1>
+            </div>
+            <p style="color: #888; margin-top: 4px;">Complete your order with Katala Homes</p>
+        </div>
+    </section>
+
+    <section class="checkout-page">
+        <div class="container">
+            <div class="checkout-grid">
+                <form class="checkout-form" id="checkoutForm">
+                    <!-- Progress Steps -->
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 32px; position: relative;">
+                        <div style="text-align: center; flex: 1; position: relative;">
+                            <div style="width: 36px; height: 36px; background: var(--gold); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 4px;">1</div>
+                            <p style="font-size: 0.75rem; color: var(--gold-dark); font-weight: 600;">Shipping</p>
+                        </div>
+                        <div style="text-align: center; flex: 1; position: relative;">
+                            <div style="width: 36px; height: 36px; background: var(--gold); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 4px;">2</div>
+                            <p style="font-size: 0.75rem; color: var(--gold-dark); font-weight: 600;">Payment</p>
+                        </div>
+                        <div style="text-align: center; flex: 1; position: relative;">
+                            <div style="width: 36px; height: 36px; background: #ddd; color: #999; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 4px;">3</div>
+                            <p style="font-size: 0.75rem; color: #999;">Confirm</p>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-user" style="color: var(--gold);"></i> Shipping information</h3>
+                        <div class="form-row">
+                            <input type="text" placeholder="First name" required />
+                            <input type="text" placeholder="Last name" required />
+                        </div>
+                        <input type="email" placeholder="Email address" required />
+                        <input type="tel" placeholder="Phone number" />
+                        <input type="text" placeholder="Street address" required />
+                        <div class="form-row">
+                            <input type="text" placeholder="City" required />
+                            <input type="text" placeholder="Postal code" required />
+                        </div>
+                        <select required>
+                            <option value="">Select country</option>
+                            <option>Italy</option>
+                            <option>United States</option>
+                            <option>United Kingdom</option>
+                            <option>Germany</option>
+                            <option>France</option>
+                            <option>Spain</option>
+                            <option>Switzerland</option>
+                        </select>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-credit-card" style="color: var(--gold);"></i> Payment method</h3>
+                        <div class="payment-options">
+                            <label style="display:flex;align-items:center;gap:8px;padding:12px 16px;border:2px solid var(--gold);border-radius:12px;cursor:pointer;flex:1;">
+                                <input type="radio" name="payment" value="card" checked /> 
+                                <i class="fas fa-credit-card" style="color: var(--gold);"></i> Credit Card
+                            </label>
+                            <label style="display:flex;align-items:center;gap:8px;padding:12px 16px;border:2px solid #ddd;border-radius:12px;cursor:pointer;flex:1;">
+                                <input type="radio" name="payment" value="paypal" /> 
+                                <i class="fab fa-paypal" style="color: #0070ba;"></i> PayPal
+                            </label>
+                            <label style="display:flex;align-items:center;gap:8px;padding:12px 16px;border:2px solid #ddd;border-radius:12px;cursor:pointer;flex:1;">
+                                <input type="radio" name="payment" value="apple" /> 
+                                <i class="fab fa-apple" style="color: #555;"></i> Apple Pay
+                            </label>
+                        </div>
+                        <input type="text" placeholder="Card number" />
+                        <div class="form-row">
+                            <input type="text" placeholder="MM/YY" />
+                            <input type="text" placeholder="CVC" />
+                        </div>
+                        <input type="text" placeholder="Cardholder name" />
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-gift" style="color: var(--gold);"></i> Order notes</h3>
+                        <textarea placeholder="Special instructions or notes..." rows="2" style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:12px;font-family:inherit;resize:vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width:100%; font-size: 1.1rem; padding: 16px;">
+                        <i class="fas fa-check-circle"></i> Place order
+                    </button>
+                    <p style="text-align:center;margin-top:12px;font-size:0.85rem;color:#888;">
+                        <i class="fas fa-lock" style="color: var(--gold);"></i> Secure checkout · Your information is encrypted
+                    </p>
+                </form>
+
+                <div class="order-summary">
+                    <h3>Order summary</h3>
+                    <div id="checkoutItems"></div>
+                    <div style="border-top: 1px solid #eee; margin: 12px 0; padding-top: 12px;">
+                        <div class="summary-row"><span>Subtotal</span><span id="checkoutSubtotal">€0.00</span></div>
+                        <div class="summary-row"><span>Shipping</span><span id="checkoutShipping">€5.00</span></div>
+                        <div class="summary-row"><span>Tax (22% VAT)</span><span id="checkoutTax">€0.00</span></div>
+                    </div>
+                    <div class="summary-row total" style="font-size: 1.4rem;">
+                        <span>Total</span>
+                        <span id="checkoutTotal" style="color: var(--gold-dark);">€5.00</span>
+                    </div>
+                    
+                    <div style="margin-top: 20px; padding: 16px; background: #f8f7f5; border-radius: 12px;">
+                        <p style="font-size: 0.85rem; color: #666; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-truck" style="color: var(--gold);"></i> 
+                            Free shipping on orders over €200
+                        </p>
+                        <p style="font-size: 0.85rem; color: #666; display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+                            <i class="fas fa-undo" style="color: var(--gold);"></i> 
+                            30-day free returns
+                        </p>
+                    </div>
+
+                    <div style="margin-top: 16px; display: flex; gap: 12px; justify-content: center;">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='32'><rect width='48' height='32' rx='4' fill='%23ddd'/><text x='8' y='22' font-size='12' fill='%23666'>VISA</text></svg>" alt="Visa" style="height: 32px;">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='32'><rect width='48' height='32' rx='4' fill='%23ddd'/><text x='4' y='22' font-size='10' fill='%23666'>MC</text></svg>" alt="Mastercard" style="height: 32px;">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='32'><rect width='48' height='32' rx='4' fill='%23ddd'/><text x='8' y='22' font-size='10' fill='%23666'>PayPal</text></svg>" alt="PayPal" style="height: 32px;">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='32'><rect width='48' height='32' rx='4' fill='%23ddd'/><text x='8' y='22' font-size='10' fill='%23666'>Apple</text></svg>" alt="Apple Pay" style="height: 32px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 style="display:flex;align-items:center;gap:8px;">
+                        
+                        <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">Katala Homes</span>
+                    </h3>
+                    <p>Luxury footwear crafted in Italy.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col"><h4>Shop</h4><a href="products.html">All products</a><a href="#">New arrivals</a><a href="#">Sale</a></div>
+                <div class="footer-col"><h4>Support</h4><a href="contact.html">Contact</a><a href="#">Returns</a><a href="#">Size guide</a></div>
+                <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="#">Careers</a><a href="admin/login.html">Admin</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Katala Homes. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+/* Tablet */
+@media (max-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .product-detail-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .cart-grid {
+        grid-template-columns: 1fr;
+    }
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+    .admin-content-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 16px 0;
+        gap: 12px;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    #menuToggle {
+        display: block;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .hero-buttons .btn {
+        text-align: center;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 16px;
+    }
+    .category-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    .admin-sidebar {
+        width: 60px;
+        padding: 16px 8px;
+    }
+    .admin-sidebar .admin-brand span {
+        display: none;
+    }
+    .admin-sidebar .admin-nav a span {
+        display: none;
+    }
+    .admin-sidebar .admin-nav a i {
+        margin-right: 0;
+    }
+    .admin-main {
+        padding: 16px;
+    }
+    .filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .filter-group {
+        flex-wrap: wrap;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    .product-card {
+        padding: 12px;
+    }
+    .admin-table-wrapper {
+        overflow-x: auto;
+    }
+}

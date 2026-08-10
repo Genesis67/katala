@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Products · Katala Homes Admin</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="admin-brand" style="display:flex;align-items:center;gap:8px;">
+                
+                <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">Katala Homes</span>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+                <a href="products.html" class="active"><i class="fas fa-box"></i> Products</a>
+                <a href="orders.html"><i class="fas fa-truck"></i> Orders</a>
+                <a href="customers.html"><i class="fas fa-users"></i> Customers</a>
+                <a href="add-product.html"><i class="fas fa-plus-circle"></i> Add Product</a>
+                <a href="../index.html" style="margin-top:40px;border-top:1px solid #eee;padding-top:16px;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1><i class="fas fa-box" style="color: var(--gold);"></i> Manage Products</h1>
+                <a href="add-product.html" class="btn btn-primary"><i class="fas fa-plus"></i> Add new product</a>
+            </header>
+
+            <!-- Product Stats -->
+            <div class="admin-stats" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="stat-card" style="border-left: 4px solid var(--gold);">
+                    <h3>12</h3>
+                    <p>Total products</p>
+                </div>
+                <div class="stat-card" style="border-left: 4px solid #28a745;">
+                    <h3>8</h3>
+                    <p>In stock</p>
+                </div>
+                <div class="stat-card" style="border-left: 4px solid #ffc107;">
+                    <h3>3</h3>
+                    <p>Low stock</p>
+                </div>
+                <div class="stat-card" style="border-left: 4px solid #dc3545;">
+                    <h3>1</h3>
+                    <p>Out of stock</p>
+                </div>
+            </div>
+
+            <!-- Quick Add Product Form -->
+            <div class="admin-card" style="margin-bottom: 24px; background: #f8f7f5; border: 2px dashed var(--gold);">
+                <h3 style="margin-bottom:12px; color: var(--gold-dark);"><i class="fas fa-fast-plus"></i> Quick add product</h3>
+                <form id="quickAddProductForm" style="display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 12px; align-items: end;">
+                    <div class="form-group" style="margin-bottom:0;">
+                        <label style="font-size:0.8rem;font-weight:600;">Product name</label>
+                        <input type="text" id="quickProductName" placeholder="Katala Homes Runner" style="padding:10px 14px;border:1px solid #ddd;border-radius:60px;width:100%;" />
+                    </div>
+                    <div class="form-group" style="margin-bottom:0;">
+                        <label style="font-size:0.8rem;font-weight:600;">Price (€)</label>
+                        <input type="number" id="quickProductPrice" placeholder="149" style="padding:10px 14px;border:1px solid #ddd;border-radius:60px;width:100%;" />
+                    </div>
+                    <div class="form-group" style="margin-bottom:0;">
+                        <label style="font-size:0.8rem;font-weight:600;">Category</label>
+                        <select id="quickProductCategory" style="padding:10px 14px;border:1px solid #ddd;border-radius:60px;width:100%;">
+                            <option value="runners">Runners</option>
+                            <option value="lo-tops">Lo-tops</option>
+                            <option value="mid-tops">Mid-tops</option>
+                            <option value="classics">Classics</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="padding:10px 24px;white-space:nowrap;"><i class="fas fa-plus"></i> Add</button>
+                </form>
+                <div id="quickAddMessage" style="margin-top:8px;font-size:0.9rem;display:none;"></div>
+            </div>
+
+            <!-- Product Table -->
+            <div class="admin-table-wrapper">
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid #f0efed;flex-wrap:wrap;gap:8px;">
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <input type="checkbox" />
+                        <span style="color:#888;font-size:0.9rem;">Select all</span>
+                    </div>
+                    <div style="display:flex;gap:12px;">
+                        <select style="padding:6px 14px;border-radius:60px;border:1px solid #ddd;">
+                            <option>Bulk actions</option>
+                            <option>Delete selected</option>
+                            <option>Update stock</option>
+                        </select>
+                        <button class="btn btn-primary" style="padding:6px 16px;font-size:0.85rem;">Apply</button>
+                    </div>
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" /></th>
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Stock</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminProductTable">
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>1</td>
+                            <td><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=50&h=50&fit=crop" alt="Product" style="width:40px;height:40px;border-radius:8px;object-fit:cover;" /></td>
+                            <td><strong>Katala Homes Runner</strong></td>
+                            <td>€149</td>
+                            <td>Runners</td>
+                            <td><span style="color:#28a745;">45</span></td>
+                            <td><span class="badge" style="background:#28a745;color:white;">In stock</span></td>
+                            <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>2</td>
+                            <td><img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=50&h=50&fit=crop" alt="Product" style="width:40px;height:40px;border-radius:8px;object-fit:cover;" /></td>
+                            <td><strong>Katala Homes Sculpt Lo</strong></td>
+                            <td>€179</td>
+                            <td>Lo-tops</td>
+                            <td><span style="color:#ffc107;">8</span></td>
+                            <td><span class="badge" style="background:#ffc107;color:#333;">Low stock</span></td>
+                            <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>3</td>
+                            <td><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=50&h=50&fit=crop" alt="Product" style="width:40px;height:40px;border-radius:8px;object-fit:cover;" /></td>
+                            <td><strong>Katala Homes Void Mid</strong></td>
+                            <td>€219</td>
+                            <td>Mid-tops</td>
+                            <td><span style="color:#28a745;">32</span></td>
+                            <td><span class="badge" style="background:#28a745;color:white;">In stock</span></td>
+                            <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>4</td>
+                            <td><img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=50&h=50&fit=crop" alt="Product" style="width:40px;height:40px;border-radius:8px;object-fit:cover;" /></td>
+                            <td><strong>Katala Homes Eclipse Low</strong></td>
+                            <td>€199</td>
+                            <td>Lo-tops</td>
+                            <td><span style="color:#dc3545;">0</span></td>
+                            <td><span class="badge" style="background:#dc3545;color:white;">Out of stock</span></td>
+                            <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;">
+                <p style="color:#888;font-size:0.9rem;">Showing 1-4 of 12 products</p>
+                <div style="display:flex;gap:8px;">
+                    <button style="padding:8px 16px;border:1px solid #ddd;border-radius:60px;background:white;cursor:pointer;">Previous</button>
+                    <button style="padding:8px 16px;border:1px solid var(--gold);border-radius:60px;background:var(--gold);color:white;cursor:pointer;">1</button>
+                    <button style="padding:8px 16px;border:1px solid #ddd;border-radius:60px;background:white;cursor:pointer;">2</button>
+                    <button style="padding:8px 16px;border:1px solid #ddd;border-radius:60px;background:white;cursor:pointer;">3</button>
+                    <button style="padding:8px 16px;border:1px solid #ddd;border-radius:60px;background:white;cursor:pointer;">Next</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

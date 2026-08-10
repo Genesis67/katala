@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customers · Katala Homes Admin</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="admin-brand" style="display:flex;align-items:center;gap:8px;">
+                
+                <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">Katala Homes</span>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+                <a href="products.html"><i class="fas fa-box"></i> Products</a>
+                <a href="orders.html"><i class="fas fa-truck"></i> Orders</a>
+                <a href="customers.html" class="active"><i class="fas fa-users"></i> Customers</a>
+                <a href="add-product.html"><i class="fas fa-plus-circle"></i> Add Product</a>
+                <a href="../index.html" style="margin-top:40px;border-top:1px solid #eee;padding-top:16px;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1><i class="fas fa-users" style="color: var(--gold);"></i> Customers</h1>
+                <div style="display:flex;gap:12px;align-items:center;">
+                    <input type="text" placeholder="Search customers..." style="padding:8px 16px;border-radius:60px;border:1px solid #ddd;width:220px;" />
+                    <button class="btn btn-primary" style="padding:8px 20px;"><i class="fas fa-plus"></i> Add</button>
+                </div>
+            </header>
+
+            <!-- Customer Stats -->
+            <div class="admin-stats" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="stat-card" style="border-left: 4px solid var(--gold);">
+                    <h3>342</h3>
+                    <p>Total customers</p>
+                </div>
+                <div class="stat-card" style="border-left: 4px solid #28a745;">
+                    <h3>128</h3>
+                    <p>Active</p>
+                </div>
+                <div class="stat-card" style="border-left: 4px solid #17a2b8;">
+                    <h3>89</h3>
+                    <p>New this month</p>
+                </div>
+                <div class="stat-card" style="border-left: 4px solid #ffc107;">
+                    <h3>€347</h3>
+                    <p>Avg. order value</p>
+                </div>
+            </div>
+
+            <div class="admin-table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" /></th>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Country</th>
+                            <th>Orders</th>
+                            <th>Total spent</th>
+                            <th>Joined</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>1</td>
+                            <td><strong>Giuseppe Rossi</strong></td>
+                            <td>giuseppe@email.com</td>
+                            <td>🇮🇹 Italy</td>
+                            <td>8</td>
+                            <td>€1,247</td>
+                            <td>2026-01-15</td>
+                            <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>2</td>
+                            <td><strong>Maria Bianchi</strong></td>
+                            <td>maria@email.com</td>
+                            <td>🇮🇹 Italy</td>
+                            <td>5</td>
+                            <td>€895</td>
+                            <td>2026-02-20</td>
+                            <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>3</td>
+                            <td><strong>Luca Ferrari</strong></td>
+                            <td>luca@email.com</td>
+                            <td>🇮🇹 Italy</td>
+                            <td>3</td>
+                            <td>€398</td>
+                            <td>2026-03-10</td>
+                            <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>4</td>
+                            <td><strong>Sofia Romano</strong></td>
+                            <td>sofia@email.com</td>
+                            <td>🇮🇹 Italy</td>
+                            <td>6</td>
+                            <td>€1,094</td>
+                            <td>2026-03-25</td>
+                            <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>5</td>
+                            <td><strong>Marco Neri</strong></td>
+                            <td>marco@email.com</td>
+                            <td>🇩🇪 Germany</td>
+                            <td>4</td>
+                            <td>€636</td>
+                            <td>2026-04-05</td>
+                            <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>6</td>
+                            <td><strong>Elena Greco</strong></td>
+                            <td>elena@email.com</td>
+                            <td>🇫🇷 France</td>
+                            <td>2</td>
+                            <td>€378</td>
+                            <td>2026-04-18</td>
+                            <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;">
+                <p style="color:#888;font-size:0.9rem;">Showing 1-6 of 342 customers</p>
+                <div style="display:flex;gap:8px;">
+                    <button style="padding:8px 16px;border:1px solid #ddd;border-radius:60px;background:white;cursor:pointer;">Previous</button>
+                    <button style="padding:8px 16px;border:1px solid var(--gold);border-radius:60px;background:var(--gold);color:white;cursor:pointer;">1</button>
+                    <button style="padding:8px 16px;border:1px solid #ddd;border-radius:60px;background:white;cursor:pointer;">2</button>
+                    <button style="padding:8px 16px;border:1px solid #ddd;border-radius:60px;background:white;cursor:pointer;">3</button>
+                    <button style="padding:8px 16px;border:1px solid #ddd;border-radius:60px;background:white;cursor:pointer;">Next</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

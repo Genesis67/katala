@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart · AURA</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo"><a href="index.html"><i class="fas fa-shoe-prints"></i> AURA</a></div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="cart.html"><i class="fas fa-shopping-bag"></i> <span class="cart-count">0</span></a>
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-bars" id="menuToggle"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Shopping cart</h1>
+            <p>Review your items</p>
+        </div>
+    </section>
+
+    <section class="cart-page">
+        <div class="container">
+            <div class="cart-grid">
+                <div class="cart-items" id="cartItems">
+                    <p class="empty-cart">Your cart is empty. <a href="products.html">Start shopping</a></p>
+                </div>
+                <div class="cart-summary">
+                    <h3>Order summary</h3>
+                    <div class="summary-row"><span>Subtotal</span><span id="subtotal">€0.00</span></div>
+                    <div class="summary-row"><span>Shipping</span><span>€5.00</span></div>
+                    <div class="summary-row total"><span>Total</span><span id="total">€5.00</span></div>
+                    <a href="checkout.html" class="btn btn-primary" style="width:100%;text-align:center;">Proceed to checkout</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"><h3><i class="fas fa-shoe-prints"></i> AURA</h3><p>Modern footwear for the urban explorer.</p><div class="socials"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+                <div class="footer-col"><h4>Shop</h4><a href="products.html">All products</a><a href="#">New arrivals</a><a href="#">Sale</a></div>
+                <div class="footer-col"><h4>Support</h4><a href="contact.html">Contact</a><a href="#">Returns</a><a href="#">Size guide</a></div>
+                <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="#">Careers</a><a href="admin/login.html">Admin</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 AURA. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
