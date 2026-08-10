@@ -1,4 +1,4 @@
-// Admin panel functionality
+// Admin panel functionality - Updated for Katala Home Essentials
 document.addEventListener('DOMContentLoaded', function() {
     // Add product form handler
     const addProductForm = document.getElementById('addProductForm');
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.addEventListener('click', function() {
             const row = this.closest('tr');
             if (row) {
-                const name = row.cells[1].textContent;
-                const price = row.cells[2].textContent;
+                const name = row.cells[1] ? row.cells[1].textContent : 'Product';
+                const price = row.cells[2] ? row.cells[2].textContent : '₦0';
                 alert(`Edit product: ${name}\nCurrent price: ${price}\nRedirect to edit page...`);
                 // In a real app, redirect to edit page
             }
@@ -44,4 +44,24 @@ document.addEventListener('DOMContentLoaded', function() {
             alert(`Order status updated to: ${this.value}`);
         });
     });
+});
+
+// Quick add product functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const quickForm = document.getElementById('quickAddProductForm');
+    if (quickForm) {
+        quickForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('quickProductName').value;
+            const price = document.getElementById('quickProductPrice').value;
+            const category = document.getElementById('quickProductCategory').value;
+            
+            if (name && price) {
+                alert(`"${name}" added to inventory!`);
+                this.reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    }
 });

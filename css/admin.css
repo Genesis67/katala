@@ -4,9 +4,15 @@
     min-height: 100vh;
     background: #f5f4f2;
 }
-/* Katala Homes Admin Purple Theme */
 
-/* Purple accents */
+/* Katala Home Essentials Admin Theme */
+:root {
+    --gold: #D4A373;
+    --gold-light: #E9D8C4;
+    --gold-dark: #B8875A;
+    --gold-gradient: linear-gradient(135deg, #D4A373 0%, #E9D8C4 50%, #D4A373 100%);
+}
+
 .admin-brand {
     color: var(--gold-dark);
 }
@@ -20,18 +26,18 @@
     color: var(--gold);
 }
 
-/* Stat cards with purple border */
+/* Stat cards with gold border */
 .stat-card {
     border-left: 4px solid var(--gold);
 }
 
-/* Table header purple accent */
+/* Table header gold accent */
 .admin-table th {
     color: var(--gold-dark);
     border-bottom: 2px solid var(--gold);
 }
 
-/* Purple icons */
+/* Gold icons */
 .admin-table td i.fa-eye {
     color: var(--gold);
 }
@@ -45,11 +51,11 @@
     font-weight: 600;
 }
 
-/* Quick add form purple border */
+/* Quick add form gold border */
 #quickAddProductForm input:focus,
 #quickAddProductForm select:focus {
     border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+    box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.1);
 }
 
 /* Pagination active */
@@ -101,7 +107,7 @@ button[style*="var(--gold)"] {
 }
 
 .admin-nav a.active {
-    background: #1e1e1e;
+    background: var(--gold-gradient);
     color: white;
 }
 
@@ -125,6 +131,7 @@ button[style*="var(--gold)"] {
 .admin-header h1 {
     font-size: 1.8rem;
     font-weight: 700;
+    color: var(--charcoal);
 }
 
 .admin-user {
@@ -156,6 +163,7 @@ button[style*="var(--gold)"] {
 .stat-card h3 {
     font-size: 1.8rem;
     font-weight: 700;
+    color: var(--charcoal);
 }
 
 .stat-card p {
@@ -180,6 +188,7 @@ button[style*="var(--gold)"] {
 .admin-card h3 {
     margin-bottom: 16px;
     font-weight: 600;
+    color: var(--charcoal);
 }
 
 .admin-list {
@@ -263,6 +272,7 @@ button[style*="var(--gold)"] {
     display: block;
     font-weight: 600;
     margin-bottom: 6px;
+    color: var(--charcoal);
 }
 
 .admin-form .form-group input,
@@ -322,6 +332,7 @@ button[style*="var(--gold)"] {
 .admin-login-header h2 {
     font-size: 1.8rem;
     font-weight: 700;
+    color: var(--charcoal);
 }
 
 .admin-login-header p {
@@ -336,6 +347,7 @@ button[style*="var(--gold)"] {
     display: block;
     font-weight: 500;
     margin-bottom: 4px;
+    color: var(--charcoal);
 }
 
 .admin-login-box .form-group input {

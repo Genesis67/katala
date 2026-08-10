@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage Products · Katala Homes Admin</title>
+    <title>Add Product · Katala Home Essentials Admin</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/admin.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
@@ -13,26 +13,86 @@
     <div class="admin-container">
         <aside class="admin-sidebar">
             <div class="admin-brand" style="display:flex;align-items:center;gap:8px;">
-                
-                <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">Katala Homes</span>
+                <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">🏠 Katala Home Essentials</span>
             </div>
             <nav class="admin-nav">
                 <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
-                <a href="products.html" class="active"><i class="fas fa-box"></i> Products</a>
+                <a href="products.html"><i class="fas fa-box"></i> Products</a>
                 <a href="orders.html"><i class="fas fa-truck"></i> Orders</a>
                 <a href="customers.html"><i class="fas fa-users"></i> Customers</a>
-                <a href="add-product.html"><i class="fas fa-plus-circle"></i> Add Product</a>
+                <a href="add-product.html" class="active"><i class="fas fa-plus-circle"></i> Add Product</a>
                 <a href="../index.html" style="margin-top:40px;border-top:1px solid #eee;padding-top:16px;"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </nav>
         </aside>
         <main class="admin-main">
             <header class="admin-header">
-                <h1><i class="fas fa-box" style="color: var(--gold);"></i> Manage Products</h1>
-                <a href="add-product.html" class="btn btn-primary"><i class="fas fa-plus"></i> Add new product</a>
+                <h1><i class="fas fa-plus-circle" style="color: var(--gold);"></i> Add New Product</h1>
+                <a href="products.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to products</a>
             </header>
 
-            <!-- Product Stats -->
-            <div class="admin-stats" style="grid-template-columns: repeat(4, 1fr);">
-                <div class="stat-card" style="border-left: 4px solid var(--gold);">
-                    <h3>12</h3>
-                    <p>Total products</p>
+            <div class="admin-form-container">
+                <form class="admin-form" id="addProductForm">
+                    <div class="form-group">
+                        <label>Product name *</label>
+                        <input type="text" placeholder="e.g. Premium Cast Iron Skillet" required />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Category *</label>
+                        <select required>
+                            <option value="">Select category</option>
+                            <option value="cookware">Cookware</option>
+                            <option value="kitchen-tools">Kitchen Tools</option>
+                            <option value="home-decor">Home Decor</option>
+                            <option value="furniture">Furniture</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                        <div class="form-group">
+                            <label>Price (₦) *</label>
+                            <input type="number" placeholder="45000" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Stock quantity *</label>
+                            <input type="number" placeholder="50" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Dimensions</label>
+                        <input type="text" placeholder="e.g. 30cm diameter" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Material</label>
+                        <input type="text" placeholder="e.g. Cast Iron" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Color</label>
+                        <input type="text" placeholder="e.g. Black" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Product description *</label>
+                        <textarea placeholder="Describe your product..." rows="4" required style="width:100%;padding:12px 16px;border:1px solid #ddd;border-radius:16px;font-family:inherit;resize:vertical;"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Image URL</label>
+                        <input type="text" placeholder="https://images.unsplash.com/photo-..." />
+                        <p style="font-size:0.8rem;color:#888;margin-top:4px;">Use Unsplash or direct image URLs</p>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Publish Product</button>
+                        <button type="reset" class="btn btn-outline">Clear All</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

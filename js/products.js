@@ -1,103 +1,140 @@
-// Product data with real shoe images from Unsplash
-// Product data with real shoe images from Unsplash
+// Product// Product data for Katala Home Essentials - 12 products with dynamic Unsplash search fallback URLs
+// Product data for Katala Home Essentials - 12 products with dynamic Unsplash search fallback URLs
 const products = [
     { 
         id: 1, 
-        name: 'Katala Homes Runner', 
-        price: 149, 
-        category: 'runners', 
-        description: 'Sleek runner with responsive cushioning and breathable mesh upper. Crafted with Italian precision.',
-        image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop'
+        name: 'Premium Cast Iron Skillet', 
+        price: 45000, 
+        category: 'cookware', 
+        description: 'Professional-grade cast iron skillet with superior heat retention. Perfect for searing, frying, and baking.',
+        image: 'https://images.unsplash.com/photo-1585515320310-2592db87d5b6?w=400&h=400&fit=crop&crop=center',
+        dimensions: '30cm diameter',
+        material: 'Cast Iron',
+        color: 'Black'
     },
     { 
         id: 2, 
-        name: 'Katala Homes Sculpt Lo', 
-        price: 179, 
-        category: 'lo-tops', 
-        description: 'Minimalist low-top crafted from premium Italian leather. Timeless elegance.',
-        image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=400&fit=crop'
+        name: 'Professional Chef\'s Knife Set', 
+        price: 35000, 
+        category: 'kitchen-tools', 
+        description: 'Premium German stainless steel knife set with ergonomic handles. Includes chef\'s knife, paring knife, and utility knife.',
+        image: 'https://images.unsplash.com/photo-1593618998160-e34014e67546?w=400&h=400&fit=crop&crop=center',
+        dimensions: '8-inch blade',
+        material: 'Stainless Steel',
+        color: 'Silver'
     },
     { 
         id: 3, 
-        name: 'Katala Homes Void Mid', 
-        price: 219, 
-        category: 'mid-tops', 
-        description: 'Mid-top with sculpted sole and futuristic design elements. Modern luxury.',
-        image: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=400&fit=crop'
+        name: 'Ceramic Vase Collection', 
+        price: 28000, 
+        category: 'home-decor', 
+        description: 'Handcrafted ceramic vase with elegant matte finish. Perfect for modern and traditional interiors.',
+        image: 'https://images.unsplash.com/photo-1578500351865-d6c3706f46bc?w=400&h=400&fit=crop&crop=center',
+        dimensions: '25cm height',
+        material: 'Ceramic',
+        color: 'White'
     },
     { 
         id: 4, 
-        name: 'Katala Homes Eclipse Low', 
-        price: 199, 
-        category: 'lo-tops', 
-        description: 'Bold silhouette with a modern edge and comfortable fit. Italian craftsmanship.',
-        image: 'https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=400&h=400&fit=crop'
+        name: 'Walnut Cutting Board Set', 
+        price: 22000, 
+        category: 'kitchen-tools', 
+        description: 'Premium walnut wood cutting board set with juice groove. Includes 3 sizes for all your chopping needs.',
+        image: 'https://images.unsplash.com/photo-1590794056226-77ef3a6c4743?w=400&h=400&fit=crop&crop=center',
+        dimensions: '40x30cm',
+        material: 'Walnut Wood',
+        color: 'Brown'
     },
     { 
         id: 5, 
-        name: 'Katala Homes Orbit Runner', 
-        price: 159, 
-        category: 'runners', 
-        description: 'Lightweight runner with responsive foam and sleek design. Performance meets luxury.',
-        image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop'
+        name: 'Stainless Steel Cookware Set', 
+        price: 85000, 
+        category: 'cookware', 
+        description: 'Complete 10-piece stainless steel cookware set with encapsulated base for even heat distribution.',
+        image: 'https://images.unsplash.com/photo-1584990347449-a2e0a29ef402?w=400&h=400&fit=crop&crop=center',
+        dimensions: 'Varied sizes',
+        material: 'Stainless Steel',
+        color: 'Silver'
     },
     { 
         id: 6, 
-        name: 'Katala Homes Zen Classic', 
-        price: 189, 
-        category: 'classics', 
-        description: 'Timeless classic with premium materials and clean lines. Italian heritage.',
-        image: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop'
+        name: 'Minimalist Floor Lamp', 
+        price: 55000, 
+        category: 'furniture', 
+        description: 'Elegant minimalist floor lamp with warm ambient lighting. Adjustable arm for perfect reading light.',
+        image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&h=400&fit=crop&crop=center',
+        dimensions: '150cm height',
+        material: 'Metal & Fabric',
+        color: 'Matte Black'
     },
     { 
         id: 7, 
-        name: 'Katala Homes Nova Mid', 
-        price: 239, 
-        category: 'mid-tops', 
-        description: 'Mid-top with innovative sole technology and modern aesthetic. Bold design.',
-        image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=400&fit=crop'
+        name: 'Bamboo Storage Organizer', 
+        price: 18000, 
+        category: 'home-decor', 
+        description: 'Sustainable bamboo storage organizer with multiple compartments. Perfect for kitchen or bathroom organization.',
+        image: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=400&h=400&fit=crop&crop=center',
+        dimensions: '35x25x10cm',
+        material: 'Bamboo',
+        color: 'Natural'
     },
     { 
         id: 8, 
-        name: 'Katala Homes Pulse Lo', 
-        price: 169, 
-        category: 'lo-tops', 
-        description: 'Low-top with pulse cushioning and urban-inspired design. Modern comfort.',
-        image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop'
+        name: 'Non-Stick Frying Pan', 
+        price: 32000, 
+        category: 'cookware', 
+        description: 'Premium non-stick frying pan with PFOA-free coating. Even heat distribution for perfect cooking.',
+        image: 'https://images.unsplash.com/photo-1583778176476-4a8b02a64c01?w=400&h=400&fit=crop&crop=center',
+        dimensions: '28cm diameter',
+        material: 'Aluminum',
+        color: 'Black'
     },
     { 
         id: 9, 
-        name: 'Katala Homes Apex Runner', 
-        price: 199, 
-        category: 'runners', 
-        description: 'Premium runner with advanced cushioning system. Peak performance.',
-        image: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?w=400&h=400&fit=crop'
+        name: 'Washing Machine', 
+        price: 25000, 
+        category: 'kitchen-tools', 
+        description: 'BPA-free glass food storage containers with airtight bamboo lids. Set of 5 in various sizes.',
+        image: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?w=400&h=400&fit=crop&crop=center',
+        dimensions: 'Varied sizes',
+        material: 'Glass & Bamboo',
+        color: 'Clear'
     },
     { 
         id: 10, 
-        name: 'Katala Homes Velo Lo', 
-        price: 159, 
-        category: 'lo-tops', 
-        description: 'Sleek low-top with velocity-inspired design. Light and responsive.',
-        image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=400&fit=crop'
+        name: 'Clothing', 
+        price: 75000, 
+        category: 'furniture', 
+        description: 'Solid wood bookshelf with 5 adjustable shelves. Perfect for your living room or home office.',
+        image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop&crop=center',
+        dimensions: '120x180x30cm',
+        material: 'Solid Wood',
+        color: 'Walnut'
     },
     { 
         id: 11, 
-        name: 'Katala Homes Strato Mid', 
-        price: 229, 
-        category: 'mid-tops', 
-        description: 'Mid-top with stratospheric comfort and style. Elevated design.',
-        image: 'https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=400&h=400&fit=crop'
+        name: 'Home Essentials', 
+        price: 38000, 
+        category: 'kitchen-tools', 
+        description: 'Elegant marble serving board for cheese, charcuterie, and appetizers. Natural veining makes each piece unique.',
+        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=400&fit=crop&crop=center',
+        dimensions: '50x25cm',
+        material: 'Marble',
+        color: 'White/Grey'
     },
     { 
         id: 12, 
-        name: 'Katala Homes Heritage Classic', 
-        price: 199, 
-        category: 'classics', 
-        description: 'Timeless classic with modern comfort technology. Italian tradition.',
-        image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop'
+        name: 'Velvet Throw Pillow Set', 
+        price: 15000, 
+        category: 'home-decor', 
+        description: 'Luxurious velvet throw pillow set with down-alternative filling. Set of 2 in neutral tones.',
+        image: 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&h=400&fit=crop&crop=center',
+        dimensions: '45x45cm',
+        material: 'Velvet',
+        color: 'Beige'
     }
 ];
+
 function getProducts() {
     return products;
 }
@@ -119,9 +156,9 @@ function renderProductGrid(containerId, productList) {
         card.className = 'product-card';
         
         card.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" loading="lazy" />
+            <img src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22><rect width=%22400%22 height=%22400%22 fill=%22%23e9d8c4%22/><text x=%2250%22 y=%22200%22 font-size=%2220%22 fill=%22%238b6b4d%22>${product.name}</text></svg>'" />
             <div class="product-name">${product.name}</div>
-            <div class="product-price">€${product.price}</div>
+            <div class="product-price">₦${product.price.toLocaleString()}</div>
         `;
         
         container.appendChild(card);
@@ -143,19 +180,16 @@ function renderProductDetail() {
     
     container.innerHTML = `
         <div class="product-detail-image">
-            <img src="${product.image}" alt="${product.name}" />
+            <img src="${product.image}" alt="${product.name}" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 600%22><rect width=%22600%22 height=%22600%22 fill=%22%23e9d8c4%22/><text x=%22100%22 y=%22300%22 font-size=%2230%22 fill=%22%238b6b4d%22>${product.name}</text></svg>'" />
         </div>
         <div class="product-detail-info">
             <h1>${product.name}</h1>
-            <div class="price">€${product.price}</div>
+            <div class="price">₦${product.price.toLocaleString()}</div>
             <p class="description">${product.description}</p>
-            <div class="size-selector">
-                <button>EU 38</button>
-                <button>EU 39</button>
-                <button>EU 40</button>
-                <button>EU 41</button>
-                <button>EU 42</button>
-                <button>EU 43</button>
+            <div class="product-attributes">
+                <div><strong>Dimensions:</strong> ${product.dimensions}</div>
+                <div><strong>Material:</strong> ${product.material}</div>
+                <div><strong>Color:</strong> ${product.color}</div>
             </div>
             <button class="btn btn-primary" id="addToCartBtn" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}">
                 <i class="fas fa-shopping-bag"></i> Add to cart

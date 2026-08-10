@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage Products · Katala Homes Admin</title>
+    <title>Manage Products · Katala Home Essentials Admin</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/admin.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
@@ -13,8 +13,7 @@
     <div class="admin-container">
         <aside class="admin-sidebar">
             <div class="admin-brand" style="display:flex;align-items:center;gap:8px;">
-                
-                <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">Katala Homes</span>
+                <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">🏠 Katala Home Essentials</span>
             </div>
             <nav class="admin-nav">
                 <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
@@ -51,32 +50,6 @@
                 </div>
             </div>
 
-            <!-- Quick Add Product Form -->
-            <div class="admin-card" style="margin-bottom: 24px; background: #f8f7f5; border: 2px dashed var(--gold);">
-                <h3 style="margin-bottom:12px; color: var(--gold-dark);"><i class="fas fa-fast-plus"></i> Quick add product</h3>
-                <form id="quickAddProductForm" style="display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 12px; align-items: end;">
-                    <div class="form-group" style="margin-bottom:0;">
-                        <label style="font-size:0.8rem;font-weight:600;">Product name</label>
-                        <input type="text" id="quickProductName" placeholder="Katala Homes Runner" style="padding:10px 14px;border:1px solid #ddd;border-radius:60px;width:100%;" />
-                    </div>
-                    <div class="form-group" style="margin-bottom:0;">
-                        <label style="font-size:0.8rem;font-weight:600;">Price (€)</label>
-                        <input type="number" id="quickProductPrice" placeholder="149" style="padding:10px 14px;border:1px solid #ddd;border-radius:60px;width:100%;" />
-                    </div>
-                    <div class="form-group" style="margin-bottom:0;">
-                        <label style="font-size:0.8rem;font-weight:600;">Category</label>
-                        <select id="quickProductCategory" style="padding:10px 14px;border:1px solid #ddd;border-radius:60px;width:100%;">
-                            <option value="runners">Runners</option>
-                            <option value="lo-tops">Lo-tops</option>
-                            <option value="mid-tops">Mid-tops</option>
-                            <option value="classics">Classics</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="padding:10px 24px;white-space:nowrap;"><i class="fas fa-plus"></i> Add</button>
-                </form>
-                <div id="quickAddMessage" style="margin-top:8px;font-size:0.9rem;display:none;"></div>
-            </div>
-
             <!-- Product Table -->
             <div class="admin-table-wrapper">
                 <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid #f0efed;flex-wrap:wrap;gap:8px;">
@@ -111,10 +84,10 @@
                         <tr>
                             <td><input type="checkbox" /></td>
                             <td>1</td>
-                            <td><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=50&h=50&fit=crop" alt="Product" style="width:40px;height:40px;border-radius:8px;object-fit:cover;" /></td>
-                            <td><strong>Katala Homes Runner</strong></td>
-                            <td>€149</td>
-                            <td>Runners</td>
+                            <td><img src="https://images.unsplash.com/photo-1584990347449-9630c9dfd4e1?w=50&h=50&fit=crop" alt="Product" style="width:40px;height:40px;border-radius:8px;object-fit:cover;" /></td>
+                            <td><strong>Premium Cast Iron Skillet</strong></td>
+                            <td>₦45,000</td>
+                            <td>Cookware</td>
                             <td><span style="color:#28a745;">45</span></td>
                             <td><span class="badge" style="background:#28a745;color:white;">In stock</span></td>
                             <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
@@ -122,10 +95,10 @@
                         <tr>
                             <td><input type="checkbox" /></td>
                             <td>2</td>
-                            <td><img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=50&h=50&fit=crop" alt="Product" style="width:40px;height:40px;border-radius:8px;object-fit:cover;" /></td>
-                            <td><strong>Katala Homes Sculpt Lo</strong></td>
-                            <td>€179</td>
-                            <td>Lo-tops</td>
+                            <td><img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?w=50&h=50&fit=crop" alt="Product" style="width:40px;height:40px;border-radius:8px;object-fit:cover;" /></td>
+                            <td><strong>Professional Chef's Knife Set</strong></td>
+                            <td>₦35,000</td>
+                            <td>Kitchen Tools</td>
                             <td><span style="color:#ffc107;">8</span></td>
                             <td><span class="badge" style="background:#ffc107;color:#333;">Low stock</span></td>
                             <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
@@ -133,10 +106,10 @@
                         <tr>
                             <td><input type="checkbox" /></td>
                             <td>3</td>
-                            <td><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=50&h=50&fit=crop" alt="Product" style="width:40px;height:40px;border-radius:8px;object-fit:cover;" /></td>
-                            <td><strong>Katala Homes Void Mid</strong></td>
-                            <td>€219</td>
-                            <td>Mid-tops</td>
+                            <td><img src="https://images.unsplash.com/photo-1612196808214-b5f89b8c6d8c?w=50&h=50&fit=crop" alt="Product" style="width:40px;height:40px;border-radius:8px;object-fit:cover;" /></td>
+                            <td><strong>Ceramic Vase Collection</strong></td>
+                            <td>₦28,000</td>
+                            <td>Home Decor</td>
                             <td><span style="color:#28a745;">32</span></td>
                             <td><span class="badge" style="background:#28a745;color:white;">In stock</span></td>
                             <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
@@ -144,10 +117,10 @@
                         <tr>
                             <td><input type="checkbox" /></td>
                             <td>4</td>
-                            <td><img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=50&h=50&fit=crop" alt="Product" style="width:40px;height:40px;border-radius:8px;object-fit:cover;" /></td>
-                            <td><strong>Katala Homes Eclipse Low</strong></td>
-                            <td>€199</td>
-                            <td>Lo-tops</td>
+                            <td><img src="https://images.unsplash.com/photo-1607457561901-3b1efd55e1b2?w=50&h=50&fit=crop" alt="Product" style="width:40px;height:40px;border-radius:8px;object-fit:cover;" /></td>
+                            <td><strong>Walnut Cutting Board Set</strong></td>
+                            <td>₦22,000</td>
+                            <td>Kitchen Tools</td>
                             <td><span style="color:#dc3545;">0</span></td>
                             <td><span class="badge" style="background:#dc3545;color:white;">Out of stock</span></td>
                             <td><i class="fas fa-eye" style="color:var(--gold);"></i> <i class="fas fa-edit"></i> <i class="fas fa-trash" style="color:#b33;"></i></td>
